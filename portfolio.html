@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Aryan Yadav – Backend & AI Engineer</title>
+<meta name="description" content="Software engineer at Wells Fargo building Java/Spring and FastAPI backends, agentic AI workflows and MCP servers.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#eef1f4;--panel:#e2e8ee;--ink:#14202b;--mute:#4a5b6a;--line:#c5d0da;--accent:#0b5d7a;--hi:#b86e00;--code:#14202b;--codeink:#d7e6f0;
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f171e;--panel:#18232d;--ink:#e6edf3;--mute:#9fb1c0;--line:#2a3a47;--accent:#5cc3e6;--hi:#f0b44c;--code:#0a1015;--codeink:#cfe3ef}}
+:root[data-theme="dark"]{--bg:#0f171e;--panel:#18232d;--ink:#e6edf3;--mute:#9fb1c0;--line:#2a3a47;--accent:#5cc3e6;--hi:#f0b44c;--code:#0a1015;--codeink:#cfe3ef}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.125rem/1.6 "Newsreader",Georgia,serif}
+a{color:var(--accent);text-underline-offset:3px}
+a:focus-visible,button:focus-visible{outline:3px solid var(--hi);outline-offset:3px}
+h1,h2,h3{font-family:"Bricolage Grotesque",system-ui,sans-serif;line-height:1.1;margin:0}
+.wrap{max-width:62rem;margin:0 auto;padding:0 1.25rem}
+nav{display:flex;gap:1.25rem;flex-wrap:wrap;padding:1.25rem 0;font-family:"Bricolage Grotesque",system-ui,sans-serif;font-weight:500;font-size:1rem}
+nav a{color:var(--ink);text-decoration:none}nav a:hover{color:var(--accent)}
+nav .me{margin-right:auto;font-weight:700}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:2.5rem;align-items:center;padding:3rem 0 4rem}
+.hero h1{font-size:clamp(2.6rem,7vw,4.6rem);font-weight:700;letter-spacing:-.02em}
+.hero p{max-width:34rem;color:var(--mute);margin:1.25rem 0 1.75rem}
+.btns{display:flex;gap:.75rem;flex-wrap:wrap}
+.btn{font-family:"Bricolage Grotesque",system-ui,sans-serif;font-weight:500;font-size:1rem;padding:.7rem 1.2rem;border-radius:6px;text-decoration:none;border:1.5px solid var(--ink);color:var(--ink)}
+.btn.main{background:var(--ink);color:var(--bg)}
+.btn:hover{border-color:var(--accent)}
+.res{background:var(--code);color:var(--codeink);border-radius:10px;padding:1.1rem 1.25rem;font:400 .9rem/1.65 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;overflow-x:auto;margin:0}
+.res .req{color:#8fb3c7;margin-bottom:.6rem;display:block}
+.res .k{color:#7fd1ee}.res .s{color:#f0c27a}.res .st{color:#8fe0a8}
+section{padding:3.5rem 0;border-top:1px solid var(--line)}
+section>.wrap>h2{font-size:clamp(1.8rem,4vw,2.4rem);margin-bottom:2rem}
+.job{display:grid;grid-template-columns:11rem 1fr;gap:1rem 2rem;margin-bottom:2.5rem}
+.job .when{color:var(--mute);font-size:1rem}
+.job h3{font-size:1.4rem;margin-bottom:.25rem}
+.job .co{color:var(--mute);margin-bottom:.75rem}
+.job ul{margin:0;padding-left:1.1rem}.job li{margin-bottom:.6rem;max-width:44rem}
+.grp{margin-bottom:1.25rem}.grp h4{font:700 1.05rem/1.2 "Bricolage Grotesque",system-ui,sans-serif;margin:0 0 .6rem}
+.job b{font-weight:500;color:var(--accent)}
+.proj{display:grid;grid-template-columns:repeat(auto-fit,minmax(18rem,1fr));gap:1.5rem}
+.proj article{background:var(--panel);border-radius:10px;padding:1.5rem}
+.proj h3{font-size:1.3rem;margin-bottom:.5rem}
+.proj p{margin:.25rem 0 1rem;color:var(--mute);font-size:1.05rem}
+.skills{display:grid;grid-template-columns:11rem 1fr;gap:.9rem 2rem;margin:0}
+.skills dt{font-family:"Bricolage Grotesque",system-ui,sans-serif;font-weight:700}
+.skills dd{margin:0;color:var(--mute)}
+.ach{display:grid;grid-template-columns:repeat(auto-fit,minmax(16rem,1fr));gap:1.5rem}
+.ach p{margin:.3rem 0 0;color:var(--mute)}
+.ach strong{font-family:"Bricolage Grotesque",system-ui,sans-serif;font-size:1.5rem;font-weight:700}
+.contact p{max-width:36rem;color:var(--mute)}
+.contact .links{display:flex;gap:1.25rem;flex-wrap:wrap;margin-top:1rem;font-family:"Bricolage Grotesque",system-ui,sans-serif;font-weight:500}
+footer{padding:2rem 0 3rem;color:var(--mute);font-size:.95rem}
+@media (max-width:760px){
+  .hero{grid-template-columns:1fr;padding-top:1.5rem}
+  .job,.skills{grid-template-columns:1fr}
+  .job .when{order:-1}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav aria-label="Primary">
+    <a class="me" href="#top">Aryan Yadav</a>
+    <a href="#work">Work</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#education">Education</a><a href="#contact">Contact</a>
+  </nav>
+
+  <header class="hero" id="top">
+    <div>
+      <h1>I build backends and the AI workflows that run on them.</h1>
+      <p>I'm Aryan, a software engineer at Wells Fargo in Hyderabad. I work across Java/Spring Boot, FastAPI and React, and I've shipped agentic AI tooling with MCP servers. I'm looking for a full-stack or backend-heavy role with AI work at an early-stage startup.</p>
+      <div class="btns">
+        <a class="btn main" href="mailto:aryany871@gmail.com">Email me</a>
+        <a class="btn" href="#work">See my work</a>
+      </div>
+    </div>
+    <pre class="res" aria-label="Summary of Aryan as an API response"><span class="req">GET /aryan</span><span class="st">200 OK</span>
+{
+  <span class="k">"role"</span>: <span class="s">"Software Engineer"</span>,
+  <span class="k">"stack"</span>: [<span class="s">"Java"</span>, <span class="s">"Spring Boot"</span>,
+            <span class="s">"FastAPI"</span>, <span class="s">"React"</span>],
+  <span class="k">"ai"</span>: [<span class="s">"MCP"</span>, <span class="s">"RAG"</span>, <span class="s">"agents"</span>],
+  <span class="k">"since"</span>: <span class="s">"Aug 2024"</span>,
+  <span class="k">"based_in"</span>: <span class="s">"Hyderabad"</span>,
+  <span class="k">"open_to"</span>: <span class="s">"startups"</span>
+}</pre>
+  </header>
+</div>
+
+<section id="work"><div class="wrap">
+  <h2>Experience</h2>
+  <div class="job">
+    <div class="when">Aug 2024 – present<br>Hyderabad</div>
+    <div>
+      <h3>Software Engineer</h3>
+      <div class="co">Wells Fargo</div>
+      <div class="grp"><h4>Full-stack product work</h4><ul>
+        <li><b>Trade approvals dashboard.</b> Built it end to end: the UI, the backend services and the database changes. It centralises configuration logic for pending trades, 1k+ a day.</li>
+        <li><b>Desk-head screen in WPF/MVVM.</b> Gave desk heads one place to view and update sales-fee data according to repo business needs.</li>
+        <li><b>Support-team APIs.</b> Built and extended Java/Spring REST APIs that cut manual support effort by 50% in maintaining the daily trade static data in production.</li>
+      </ul></div>
+      <div class="grp"><h4>AI and automation</h4><ul>
+        <li><b>Agentic AI workflow.</b> Built an end-to-end workflow on FastAPI and MCP servers that sped up feature development and unit testing by 40%.</li>
+        <li><b>Trader support chatbot.</b> Built with React, FastAPI and MongoDB to answer traders' daily operational and platform questions, aiming to cut manual support effort by more than 75%.</li>
+        <li><b>Mentoring on an AI support portal.</b> Guided 2 interns through design, implementation and backend automation integration of an AI-powered support portal in Python, FastAPI and React.</li>
+        <li><b>AI-assisted fixes at scale.</b> Fixed 200+ issues in the Reporting module using GitHub Copilot and Devin, speeding up debugging while keeping production stable.</li>
+      </ul></div>
+      <div class="grp"><h4>Backend and platform reliability</h4><ul>
+        <li><b>Spring upgrades.</b> Migrated several modules of the Repo Trading platform from Spring 5 to Spring 6 and 7, fixing compatibility issues along the way.</li>
+        <li><b>Production fix at 10k+ trades a day.</b> Traced wrong log timestamps to Gradle dependency version conflicts and resolved them, so every trade entry carries the correct time.</li>
+        <li><b>CI/CD migration.</b> Led the move of the Repo Calculation modules from Jenkins and UCD to GitHub Actions and Harness, making deployments more standard and releases faster.</li>
+        <li><b>Ops automation.</b> Automated backend server restarts with Unix scripts and AutoSys, saving about one developer hour a day.</li>
+      </ul></div>
+    </div>
+  </div>
+  <div class="job">
+    <div class="when">Sep – Dec 2024<br>Remote</div>
+    <div>
+      <h3>Competitive Programming Intern</h3>
+      <div class="co">HeyCoach</div>
+      <ul><li>Wrote study material for product-company technical interviews, covering data structures, algorithms, object-oriented programming and coding practices.</li></ul>
+    </div>
+  </div>
+</div></section>
+
+<section id="projects"><div class="wrap">
+  <h2>Projects</h2>
+  <div class="proj">
+    <article>
+      <h3>Movie recommendation system</h3>
+      <p>Personalised recommendations using collaborative filtering and the Alternating Least Squares algorithm in Python and PySpark. It reached 95% accuracy on the MovieLens 100K dataset.</p>
+      <a href="#contact">Source code (add link)</a>
+    </article>
+    <article>
+      <h3>Web shooting game</h3>
+      <p>A 2D browser shooting game in JavaScript and Kaboom.js. A random number generator spawns the characters and obstacles.</p>
+      <a href="#contact">Source code (add link)</a>
+    </article>
+  </div>
+</div></section>
+
+<section id="skills"><div class="wrap">
+  <h2>Skills</h2>
+  <dl class="skills">
+    <dt>Backend</dt><dd>Java, Spring, Spring Boot, Python, FastAPI, C#, REST APIs</dd>
+    <dt>Frontend</dt><dd>ReactJS, JavaScript, HTML, CSS, WPF and MVVM</dd>
+    <dt>Data</dt><dd>SQL, MS SQL Server, NoSQL, MongoDB</dd>
+    <dt>AI</dt><dd>Generative AI, prompt engineering, MCP, RAG, Claude Code, GitHub Copilot, Cursor, Devin</dd>
+    <dt>Foundations</dt><dd>Data structures, algorithms, operating systems, object-oriented programming, Git and GitHub</dd>
+  </dl>
+</div></section>
+
+<section id="education"><div class="wrap">
+  <h2>Education</h2>
+  <div class="job">
+    <div class="when">2020 – 2024<br>New Delhi</div>
+    <div>
+      <h3>B.Tech in Computer Science with Artificial Intelligence</h3>
+      <div class="co">Netaji Subhas University of Technology, Main Campus</div>
+      <ul><li>CGPA 8.63</li></ul>
+    </div>
+  </div>
+</div></section>
+
+<section id="certifications"><div class="wrap">
+  <h2>Certifications</h2>
+  <div class="job">
+    <div class="when">Completed Sep 2026<br>Issued 16 Sep 2026</div>
+    <div>
+      <h3>AI &amp; Agents: From Talking to AI to Building One</h3>
+      <div class="co">Certificate of Excellence, Scaler Academy</div>
+      <ul><li>Module with 5 weeks of project building.</li>
+      <li><a href="https://certificate.scaler.com/validate/16c041c7f9555cbed1c97640dec80114b54b3dc67bbd565d07a632a031fad9d0" target="_blank" rel="noopener">Verify this certificate on Scaler</a></li></ul>
+    </div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <h2>Achievements</h2>
+  <div class="ach">
+    <div><strong>Rank 1,020 of 26,069</strong><p>LeetCode Biweekly Contest 86, global rank.</p></div>
+    <div><strong>Knight rating</strong><p>On LeetCode, with 4.3K+ views on my published solutions. <a href="https://leetcode.com/aryany871">My profile</a></p></div>
+  </div>
+</div></section>
+
+<section id="contact" class="contact"><div class="wrap">
+  <h2>Let's talk</h2>
+  <p>If your team needs someone who can own a backend service and wire AI into it, send me a note.</p>
+  <div class="links">
+    <a href="mailto:aryany871@gmail.com">aryany871@gmail.com</a>
+    <a href="#">LinkedIn</a>
+    <a href="#">GitHub</a>
+  </div>
+</div></section>
+
+<div class="wrap"><footer>© 2026 Aryan Yadav</footer></div>
+</body>
+</html>
